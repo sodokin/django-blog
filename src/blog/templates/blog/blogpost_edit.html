@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>Modifier des articles</title> {% endblock %}
+
+{% block content %}
+     <h1>Modifier un article</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Modifier" class="btn btn-submit">
+    </form>
+{% endblock %}

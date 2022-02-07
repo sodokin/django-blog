@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>{{ object.title }}</title> {% endblock %}
+
+{% block content %}
+    <article class="post-detail">
+        <h2> {{ object.title}} </h2>
+        <img src=" {{ object.thumbnail.url }} " alt="L'image de l'article">
+        <div> {{ object.content|linebreaks|safe }} </div>
+    </article>
+{% endblock %}

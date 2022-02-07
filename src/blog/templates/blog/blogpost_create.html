@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>Ajouter des articles</title> {% endblock %}
+
+{% block content %}
+     <h1>Ajouter un article</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="créer" class="btn btn-submit">
+    </form>
+{% endblock %}
